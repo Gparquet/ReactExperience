@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        app: './src/main.js'
+        app: './src/step1/main.js'
     },
     devServer: {
 		port: 1988
@@ -12,7 +12,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            title: 'TweeterFake',
+            title: 'ReactExperience',
             template: './index.html',
             filename: './index.html'
         })
