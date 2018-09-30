@@ -4,7 +4,9 @@
   "description": "Tuto about first React JavaScript Project",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "jest",
+    "start": "webpack-dev-server --hot --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
