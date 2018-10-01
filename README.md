@@ -64,12 +64,13 @@ Step 5 : enhanced with ReactJS
 * In App.js file add  an App React component and export it. 
 * In Main.js add react dom renderer for add App component create below.
 * Update webpack.common.js file at ligne 7 and replace by this ligne (app: './src/step1/main.js').
+* Type this commande --> npm start
 
 ```
 
 ## Authors
 
-* **Geoffrey Parquet** - *Initial work* - [PurpleBooth](https://github.com/Gparquet/)
+* **Geoffrey Parquet** - *Initial work* - [PersonalGit](https://github.com/Gparquet/)
 
 ## Acknowledgments
 
