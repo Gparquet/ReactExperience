@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        app: './src/step1/main.js'
+        app: './src/step2/main.js'
     },
     devServer: {
 		port: 1988
