@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Proptypes from 'prop-types';
 
 class Contact extends Component {
 
@@ -36,7 +37,7 @@ class Contact extends Component {
                     email : {email}
                     <br />
                     {
-                        this.props.isFamily &&
+                        isFamily &&
                         <p>Je suis de la famille</p>
                     }
                 </p>
@@ -44,5 +45,14 @@ class Contact extends Component {
         );
     }
 }
+
+Contact.propTypes = {
+    user : Proptypes.shape({ 
+        firstName: Proptypes.string.isRequired,
+    lastName: Proptypes.string.isRequired,
+    phoneNumber: Proptypes.string.isRequired,
+    email: Proptypes.string.isRequired,
+    })
+};
 
 export default Contact;
