@@ -10,8 +10,8 @@ const propType = {
     })
 };
 
-const ContactHoc = (user)=>{
-    const { firstName, lastName, phoneNumber, email, isFamily } = user;
+const ContactHoc = ({user, handleChange})=>{
+    const {firstName, lastName, phoneNumber, email, isFamily} = user;
     return (
         <div id="container">
             <h2>Je suis un composant contact</h2>
@@ -28,7 +28,7 @@ const ContactHoc = (user)=>{
                     isFamily &&
                     <p>Je suis de la famille</p>
                 }
-                <input type="text" value={firstName} />
+                <input type="text" name="firstName" value={firstName} onChange={handleChange} />
             </p>
         </div>
         );

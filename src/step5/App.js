@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ContactHoc from './ContactHoc';
+import ContactHoc from './Contact.container';
  
 class App extends Component{
     render(){
@@ -14,7 +14,7 @@ class App extends Component{
         return(
             <div>
                 <h1>First Application React</h1>
-                <ContactHoc {...user} />
+                <ContactHoc user={user} />
             </div>    
         );
     }
