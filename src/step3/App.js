@@ -4,10 +4,12 @@ import Contact from './Contact';
 class App extends Component{
     render(){
         const user = {
-        firstName: 'Toto', 
+        firstName: undefined, 
         lastName: 'Tata', 
         phoneNumber : '06366565', 
-        email: 'toto.tata@test.fr'};
+        email: 'toto.tata@test.fr',
+        isFamily: false,
+        };
         
         return(
             <div>
