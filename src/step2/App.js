@@ -3,13 +3,13 @@ import AllContact from './AllContact.component';
  
 class App extends Component{
     render(){
-        const person = {
-        firstName: 'Parquet', 
-        lastName: 'Tata', 
-        phoneNumber : '06366565', 
-        email: 'toto.tata@test.fr',
-        isFamily: false,
-        };
+        // const person = {
+        // firstName: 'Parquet', 
+        // lastName: 'Tata', 
+        // phoneNumber : '06366565', 
+        // email: 'toto.tata@test.fr',
+        // isFamily: false,
+        // };
         
         return(
             <div>

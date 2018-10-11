@@ -1,34 +1,35 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Contact from './Contact';
 
-class AllContact extends Component{
-    constructor(props){
+class AllContact extends Component {
+    constructor(props) {
         super(props);
-    
+
         this.state = {
-            AllContact : []
+            allContact: []
         }
     }
-    
-    componentDidMount(){
-        fetch('http://localhost:3000/api/contacts')
-        .then(res => res.json())
-        .then((result) =>{
-            this.setState({
-                AllContact: result
-            })
-        });
+
+    componentWillMount() {
+        fetch('http://127.0.0.1:3000/api/contacts')
+            .then(res => res.json())
+            .then((result) => {
+                this.setState({
+                    allContact: result
+                })
+            });
     }
 
-    render(){
-        <div>
-            {
-                this.state.AllContact.length > 0 &&
-                this.state.AllContact.map((currentContact) =>{
-                    <Contact person={currentContact} />
-                })
-            } 
-        </div>
+    render() {
+        const { allContact } = this.state;
+        return (
+
+            <div>
+                {
+                    allContact.length > 0 &&
+                    allContact.map(currentContact => <Contact person={currentContact} />)
+                }
+            </div>);
     }
 }
 
