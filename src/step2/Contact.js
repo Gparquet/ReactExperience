@@ -9,20 +9,16 @@ class Contact extends Component {
             firstName: '',
             lastName: '',
             phoneNumber: '',
-            email: '',
-            isFamily: undefined
+            email: ''
         }
 
         this.state = initialState;
     }
     componentDidMount() {
-        let isFamily = this.props.firstName === 'Parquet' ? true : false;
-        console.log(this.props.firstName);
-        this.setState({ isFamily });
 
     }
     render() {
-        const { firstName, lastName, phoneNumber, email, isFamily } = this.props.user;
+        const { firstName, lastName, phoneNumber, email } = this.props.person;
         return (
             <div id="container">
                 <h2>Je suis un composant contact</h2>
@@ -34,11 +30,6 @@ class Contact extends Component {
                     Numéro de téléphone : {phoneNumber}
                     <br />
                     email : {email}
-                    <br />
-                    {
-                        this.props.isFamily &&
-                        <p>Je suis de la famille</p>
-                    }
                 </p>
             </div>
         );

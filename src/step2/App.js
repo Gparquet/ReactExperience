@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import Contact from './Contact';
+import AllContact from './AllContact.component';
  
 class App extends Component{
     render(){
-        const user = {
+        const person = {
         firstName: 'Parquet', 
         lastName: 'Tata', 
         phoneNumber : '06366565', 
@@ -14,7 +14,7 @@ class App extends Component{
         return(
             <div>
                 <h1>First Application React</h1>
-                <Contact user={user} />
+                <AllContact />
             </div>    
         );
     }
