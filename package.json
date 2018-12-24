@@ -1,9 +1,10 @@
 {
   "name": "reactexperience",
   "version": "1.0.0",
-  "description": "Tuto about first React JavaScript Project",
+  "description": "Oceane Consulting React presentation",
   "main": "index.js",
   "scripts": {
+    "format": "prettier",
     "test": "jest",
     "start": "webpack-dev-server --hot --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
@@ -20,6 +21,7 @@
   "homepage": "https://github.com/Gparquet/ReactExperience#readme",
   "dependencies": {
     "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^7.1.4",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
@@ -27,10 +29,12 @@
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
     "eslint": "^5.2.0",
+    "eslint-plugin-react": "^7.11.1",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^23.4.1",
     "lodash": "^4.17.10",
     "moment": "^2.22.2",
+    "prettier": "^1.15.3",
     "prop-types": "^15.6.1",
     "rc-upload": "^2.5.1",
     "react": "^16.4.0",
