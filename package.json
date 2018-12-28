@@ -6,7 +6,8 @@
   "scripts": {
     "format": "prettier",
     "test": "jest",
-    "start": "webpack-dev-server --hot --open --config webpack.dev.js",
+    "eslint": "eslint src/**/*.js",
+    "start": "npm run eslint && webpack-dev-server --hot --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
   "repository": {
@@ -20,21 +21,7 @@
   },
   "homepage": "https://github.com/Gparquet/ReactExperience#readme",
   "dependencies": {
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^10.0.1",
-    "babel-loader": "^7.1.4",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "clean-webpack-plugin": "^0.1.19",
-    "eslint": "^5.2.0",
-    "eslint-plugin-react": "^7.11.1",
-    "html-webpack-plugin": "^3.2.0",
-    "jest": "^23.4.1",
     "lodash": "^4.17.10",
-    "moment": "^2.22.2",
-    "prettier": "^1.15.3",
     "prop-types": "^15.6.1",
     "rc-upload": "^2.5.1",
     "react": "^16.4.0",
@@ -45,14 +32,30 @@
     "recompose": "^0.27.1",
     "redux": "^4.0.0",
     "redux-form": "^7.4.2",
-    "redux-thunk": "^2.3.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.4.1",
+    "babel-core": "^6.26.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "eslint": "^5.11.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.12.0",
+    "prettier": "^1.15.3",
     "webpack": "^4.15.1",
     "webpack-cli": "^3.0.8",
     "webpack-dev-server": "^3.1.4",
     "webpack-merge": "4.1.3"
-  },
-  "devDependencies": {
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "webpack-cli": "^3.0.1"
   }
 }
