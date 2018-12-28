@@ -12,7 +12,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            title: 'TweeterFake',
+            title: 'OcnPresentation',
             template: './index.html',
             filename: './index.html'
         })
