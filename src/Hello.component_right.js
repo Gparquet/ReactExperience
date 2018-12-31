@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 
-class HelloComponent extends Component{
-    render(){
-        return(<div>
-            Hello I'am a Component ! 
-        </div>);
-    }
+// eslint-disable-next-line react/prefer-stateless-function
+class HelloComponent extends Component {
+  render() {
+    return (<div>Hello Iam a Component !</div>);
+  }
 }
 
 export default HelloComponent;
