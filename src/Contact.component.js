@@ -1,23 +1,21 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
-class ContactComponent extends Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            contacts: [{
-                firstName: 'jean',
-                lastName: 'phil'
-            },
+// eslint-disable-next-line react/prefer-stateless-function
+class ContactComponent extends Component {
+  render() {
+    // eslint-disable-next-line react/prop-types
+    const { contacts } = this.props;
+    return (
+        <div>
+            <ul>
             {
-                firstName: 'larry',
-                lastName: "cxwc",
+                contacts.map(currentContact => (
+                <li key={currentContact.id}>{`${currentContact.firstName} ${currentContact.lastName}`}</li>))
             }
-            ]
-        };
-    }
-    render(){
-        return (
-        <div>  
-        </div>);
-    }
+            </ul>
+        </div>
+    );
+  }
 }
+
+export default ContactComponent;
