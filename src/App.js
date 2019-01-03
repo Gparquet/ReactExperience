@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import HelloComponent from './Hello.component';
-import ContactComponent from './Contact.component';
+import ContactArray from './ContactArray.component';
+import AddContact from './AddContact.component';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class App extends Component {
@@ -21,6 +22,8 @@ class App extends Component {
         age: 70,
       },
       ],
+      firstName: '',
+      lastName: '',
     };
     this.addContact = this.addContact.bind(this);
   }
@@ -54,19 +57,44 @@ class App extends Component {
     const { contacts } = this.state;
     const updateContacts = [...contacts, { id: 'eeb5dcfd-1d4d-4afe-b589-81bbae02187f',
       firstName,
-      lastName }];
+      lastName,
+      age: 19,
+    }];
     this.setState({
       contacts: updateContacts,
     });
   };
 
+  handleChange = name => (event) => {
+    this.setState({
+      [name]: event.target.value,
+    });
+  };
+
+  handleAdd = () => {
+    const { firstName, lastName } = this.state;
+    // eslint-disable-next-line react/prop-types
+    this.addContact(firstName, lastName);
+  };
+
   render() {
-    const { contacts } = this.state;
+    const { contacts, firstName, lastName } = this.state;
+    const addContactProps = {
+        handleFunctions: {
+          handleAdd: this.handleAdd,
+          handleChange: this.handleChange,
+        },
+        data: {
+        firstName,
+        lastName,
+        },
+    };
     return (
             <div>
                 <h1>Application React OCN</h1>
                  <HelloComponent />
-                 <ContactComponent contacts={contacts} addContact={this.addContact} />
+                 <ContactArray contacts={contacts} />
+                 <AddContact props={addContactProps} />
             </div>
     );
   }
