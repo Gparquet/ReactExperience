@@ -85,6 +85,7 @@ module.exports = {
     'react/no-direct-mutation-state': 'error', // airbnb is using off
     'react/no-find-dom-node': 'off', // airbnb use error
     'react/sort-prop-types': 'error', // airbnb use off
+    'react/forbid-prop-types': ['error', { "forbid": ['any', 'array', 'object'], checkContextTypes: true, checkChildContextTypes: true }],
     'jsx-a11y/label-has-associated-control': 'off',
     'jsx-a11y/label-has-for': 'off',
     'jsx-a11y/no-autofocus': 'off', // We are a library, people do what they want.

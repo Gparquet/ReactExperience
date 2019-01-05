@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import HelloComponent from './Hello.component';
-import ContactArray from './ContactArray.component';
-import AddContact from './AddContact.component';
+import ContactArray from './ContactArrayWithPropTypes.component';
+import AddContact from './AddContactWithPropTypes.component';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // eslint-disable-next-line react/no-unused-state
       contacts: [{
         id: '6b387d64-4b24-4c5e-8bd0-4d23b4c8ea9b',
         firstName: 'Jean',
@@ -31,7 +30,6 @@ class App extends Component {
   componentWillMount() {
     // eslint-disable-next-line no-console
     console.log('Start mounting');
-    // eslint-disable-next-line react/prop-types
     const { contacts } = this.state;
     const contactUpdated = [];
     contacts.forEach(currentContact => {
